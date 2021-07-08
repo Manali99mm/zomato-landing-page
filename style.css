@@ -9,6 +9,10 @@ body {
   background-color: #ebf2ff;
 }
 
+section {
+  margin: 4rem 0;
+}
+
 .container {
   max-width: 100%;
   padding: 0 20px;
@@ -158,23 +162,28 @@ button {
 .restaurant__images__row__two {
   width: 100%;
   display: flex;
-  gap: 5px;
 }
 
 .restaurant__images__row__one {
   align-items: baseline;
-  margin-bottom: 5px;
+}
+
+.restaurant__images__row__two {
+  align-items: flex-start;
+  margin-top: 10px;
 }
 
 .restaurant__image__1,
 .restaurant__image__4 {
   width: 100%;
-  height: 150px;
+  height: 80px;
+  margin: 0 5px;
 }
 .restaurant__image__2,
 .restaurant__image__3 {
   width: 120%;
-  height: 200px;
+  height: 100px;
+  margin: 0 5px;
 }
 
 .restaurant__1,
@@ -186,6 +195,69 @@ button {
   border-radius: 4px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Email Subscribe */
+.email__subscribe__text {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #1d3557;
+  font-weight: 900;
+}
+
+.email__subscribe__container {
+  margin-top: 3rem;
+  width: 100%;
+  padding: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.email__subcribe__input__field {
+  display: flex;
+  align-items: center;
+}
+
+.email__input {
+  border: 1px solid #ee89a0;
+  background-color: #fcedf0;
+  color: #1d3557;
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.email__input::placeholder {
+  color: #bdbcbc;
+}
+
+/* Quote */
+.quote__container {
+  position: relative;
+  margin-top: 4rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  border-radius: 13px;
+  background: url("https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80")
+    center center / cover no-repeat;
+}
+.quote_image_overlay {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  border-radius: 13px;
+  background-color: #0a4065;
+  opacity: 49%;
+}
+.quote_image_text {
+  color: #fff;
+  z-index: 3;
+  margin: 0 1rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -242,13 +314,56 @@ button {
     background: none;
   }
 
-  .restaurant__container {
-    display: flex;
-    align-items: center;
-  }
   .restaurant__text {
     width: 100%;
-    font-size: 40px;
+    font-size: 30px;
+  }
+  .restaurant__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .restaurant__images__row__one {
+    justify-content: center;
+  }
+  .restaurant__images__row__two {
+    margin-top: 10px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .email__subscribe__text {
+    font-size: 30px;
+  }
+  .email__subscribe__container {
+    display: flex;
+    justify-content: center;
+  }
+  .email__input {
+    width: 20rem;
+  }
+
+  .quote__container {
+    height: 300px;
+    width: 100%;
+  }
+  .quote_image_overlay {
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    border-radius: 13px;
+    background-color: #0a4065;
+    opacity: 49%;
+  }
+  .quote_image_text {
+    color: #fff;
+    z-index: 3;
+    margin: 0 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
   }
 }
 
@@ -258,6 +373,7 @@ button {
   }
   .navbar {
     padding: 0 3rem;
+    max-height: 80px;
   }
   .navbar__brand {
     width: 150px;
@@ -286,5 +402,20 @@ button {
 
   .restaurant__text {
     font-size: 50px;
+  }
+  .restaurant__2,
+  .restaurant__3 {
+    height: 260px;
+  }
+  .restaurant__1,
+  .restaurant__4 {
+    height: 180px;
+  }
+
+  .email__subscribe__text {
+    font-size: 40px;
+  }
+  .email__subscribe__container {
+    margin-top: 220px;
   }
 }
